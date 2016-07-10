@@ -21,20 +21,28 @@ func MyAtoi(str string) int {
 	var (
 		neg    bool
 		ret    int
-		t1, t2 string
+		t1, t2 bool
 	)
 	for _, v := range strings.TrimSpace(str) {
 		if string(v) == "-" {
-			neg = true
-			t1 = "-"
-			continue
-		} else if string(v) == "+" {
-			t2 = "+"
-			continue
+			t1 = true
 		}
 
-		if t1 == "-" && t2 == "+" {
-			return 0
+		if string(v) == "+" {
+			t2 = true
+		}
+	}
+
+	if t1 && t2 {
+		return 0
+	}
+
+	for _, v := range strings.TrimSpace(str) {
+		if string(v) == "-" {
+			neg = true
+			continue
+		} else if string(v) == "+" {
+			continue
 		}
 
 		digit := int(v - '0')
