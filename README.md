@@ -8,4 +8,4 @@ LeetCode.go
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|1|[Nim Game](https://leetcode.com/problems/two-sum/)  | [golang](.//two_num/two_num.go)|Easy|
+|1|[Two Sum](https://leetcode.com/problems/two-sum/)  | [golang](.//two_num/two_num.go)|Easy|
