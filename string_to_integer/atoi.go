@@ -16,9 +16,22 @@ func MyAtoi(str string) int {
 		return 0
 	}
 
+	cs := strings.TrimSpace(str)
+	var i int
+	for ; i < len(cs); i++ {
+		if string(cs[i]) == "+" || string(cs[i]) == "-" {
+			if i == 0 {
+				continue
+			}
+		}
+
+		if int(cs[i]-'0') > 9 || int(cs[i]-'0') < 0 {
+			return 0
+		}
+	}
+
 	var neg, ret, index int
 	neg = 1
-	cs := strings.TrimSpace(str)
 	for _, v := range cs {
 		if string(v) == "+" {
 			index++
