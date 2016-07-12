@@ -1,8 +1,6 @@
 /*
 Implement atoi to convert a string to an integer.
-
 Hint: Carefully consider all possible input cases. If you want a challenge, please do not see below and ask yourself what are the possible input cases.
-
 Notes: It is intended for this problem to be specified vaguely (ie, no given input specs). You are responsible to gather all the input requirements up front.
 */
 
@@ -18,48 +16,32 @@ func MyAtoi(str string) int {
 		return 0
 	}
 
-	var (
-		neg    bool
-		ret    int
-		t1, t2 bool
-	)
-	for _, v := range strings.TrimSpace(str) {
-		if string(v) == "-" {
-			t1 = true
-		}
-
+	var neg, ret, index int
+	neg = 1
+	cs := strings.TrimSpace(str)
+	for _, v := range cs {
 		if string(v) == "+" {
-			t2 = true
+			index++
+		} else if string(v) == "-" {
+			neg = -1
+			index++
 		}
 	}
 
-	if t1 && t2 {
-		return 0
-	}
-
-	for _, v := range strings.TrimSpace(str) {
-		if string(v) == "-" {
-			neg = true
-			continue
-		} else if string(v) == "+" {
-			continue
+	for ; index < len(cs); index++ {
+		if int(cs[index]-'0') < 0 || int(cs[index]-'0') > 9 {
+			break
 		}
-
-		digit := int(v - '0')
-		if neg {
-			if -ret < (math.MinInt32+digit)/10 {
-				return math.MinInt32
-			}
-		} else {
-			if ret > (math.MaxInt32-digit)/10 {
-				return math.MaxInt32
-			}
+		ret = ret*10 + int(cs[index]-'0')
+		if ret > math.MaxInt32 {
+			break
 		}
-		ret = ret*10 + digit
 	}
 
-	if neg {
-		ret = -ret
+	if neg*ret >= math.MaxInt32 {
+		return math.MaxInt32
+	} else if neg*ret <= math.MinInt32 {
+		return math.MinInt32
 	}
-	return ret
+	return ret * neg
 }
