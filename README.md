@@ -9,6 +9,7 @@ LeetCode.go
 | # | Title | Solution | Difficulty | Comment | 
 |---| ----- | -------- | ---------- | ------- |
 |371|[Sum of Two Integers)](https://leetcode.com/problems/sum-of-two-integers/)  | [golang](.//sum_of_two_integers/sum_of_two_integers.go)|Easy|fixed|
+|349|[Intersection of Two Arrays)](https://leetcode.com/problems/intersection-of-two-arrays/)  | [golang](.//intersection-of-two-arrays/intersection-of-two-arrays.go)|Easy|fixed|
 |9|[Palindrome Number)](https://leetcode.com/problems/palindrome-number/)  | [golang](.//palindrome_number/palindrome_number.go)|Easy|fixed|
 |8|[String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/)  | [golang](.//string_to_integer/atoi.go)|Easy|not fix|
 |7|[Reverse Integer](https://leetcode.com/problems/reverse-integer/)  | [golang](.//reverse_integer/reverse_integer.go)|Easy|fixed|
