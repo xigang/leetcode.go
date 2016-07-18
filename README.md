@@ -11,6 +11,7 @@ LeetCode.go
 |371|[Sum of Two Integers)](https://leetcode.com/problems/sum-of-two-integers/)  | [golang](.//sum_of_two_integers/sum_of_two_integers.go)|Easy|fixed|
 |350|[Intersection of Two ArraysII)](https://leetcode.com/problems/intersection-of-two-arrays-ii/)  | [golang](.//intersection_of_two_arrays2/intersection_of_two_array2.go)|Easy|fixed|
 |349|[Intersection of Two Arrays)](https://leetcode.com/problems/intersection-of-two-arrays/)  | [golang](.//intersection_of_two_arrays/intersetion_of_two_arrays.go)|Easy|fixed|
+|26|[Remove Duplicates from Sorted Array )](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)  | [golang](.//remove_duplicates_from_sorted_array/remove_duplicates_from_sorted_array.go)|Easy|fixed|
 |14|[Longest Common Prefix)](https://leetcode.com/problems/longest-common-prefix/)  | [golang](.//longest_common_prefix/longest_common_prefix.go)|Easy|fixed|
 |9|[Palindrome Number)](https://leetcode.com/problems/palindrome-number/)  | [golang](.//palindrome_number/palindrome_number.go)|Easy|fixed|
 |8|[String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/)  | [golang](.//string_to_integer/atoi.go)|Easy|not fix|
