@@ -10,17 +10,26 @@ func main() {
 }
 
 func isValid(s string) bool {
+	hashMap := map[string]string{
+		")": "(",
+		"]": "[",
+		"}": "{",
+	}
+
 	stack := NewStack()
 	for _, v := range s {
-		stack.Push(string(v))
+		c := string(v)
+		switch c {
+		case "(", "[", "{":
+			stack.Push(c)
+			break
+		case ")", "]", "}":
+			if stack.Empty() || hashMap[c] != stack.Pop() {
+				return false
+			}
+		}
 	}
-
-	stackLen := stack.Len()
-	var valid bool
-	if stackLen > 0 {
-
-	}
-
+	return stack.Empty()
 }
 
 type Stack struct {
