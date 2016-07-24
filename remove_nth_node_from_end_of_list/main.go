@@ -24,11 +24,11 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 	p := &dummy
 	q := &dummy
 
-	for i := 0; i < n; i++ {
+	for i := 0; i < n; i++ { //先抵达n
 		q = q.Next
 	}
 
-	for q.Next != nil {
+	for q.Next != nil { //一起走
 		p = p.Next
 		q = q.Next
 	}
